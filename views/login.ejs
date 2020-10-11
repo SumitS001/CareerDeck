@@ -1,0 +1,42 @@
+<%- include('partials/header') %> 
+
+  <!-- Login -->
+  <div class="login-signup">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5 m-auto">
+          <img src="images/favicon2.png" alt="icon" height="80px" width="80px">
+          <h1 class="display-5 text-center login-page-title">Login to careerDeck</h1>
+          <form action="/login" method="POST">
+            <div class="form-group">
+              <input type="email" class="form-control form-control-lg" placeholder="Email Address" name="email" required/>
+            </div>
+            <div class="form-group">
+              <input type="password" class="form-control form-control-lg" placeholder="Password" name="password" required/>
+            </div>
+            <div>
+              <label><input type="checkbox" value="Remember Me"> Remember Me</label>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Log in</button>
+            <br>
+            <h5>Don't have an account yet? <a href="/signup"> Create Account</a></h5>
+            <hr>
+            <div class="form-group">
+              <a href="/auth/google" class="btn btn-lg btn-social btn-google btn-block fab fa-google-plus-g google-button"> | Login With Google</a>
+            </div>
+            <div class="form-group">
+              <a href="/auth/google" class="btn btn-lg btn-social btn-google btn-block fab fa-facebook-f facebook-button"> | Login With Facebook</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Footer part -->
+  <footer class="footer for-login-signup">
+
+
+    <%- include('partials/footer') %> 

@@ -2,7 +2,6 @@ body {
   font-family: "Montserrat";
   text-align: center;
   margin: 0;
-
 }
 
 /* class for Navbar */
@@ -17,33 +16,30 @@ body {
 }
 
 
-/* Class for Image */
-.top{
-  width: 100%;
-  opacity: 0.7;
-}
-
-
 .title-intro {
-  position: absolute;
-  top: 25%;
-  left: 50%;
-  transform: translate(-50%, -60%);
-  width: 80%;
+  position: relative;
+  top: 15%;
+  left: 5%;
+  width: 40%;
 }
-
 
 /* class for main page content */
+#first{
+  position: relative;
+  background-image: url(../images/7.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin-top: 5%;
+  height: 40vw;
+}
+
 .first-page-main-title{
-  left: 200px;
-  position: absolute;
-  font-size: 8rem;
+  font-size: 8vw;
   font-family: sans-serif;
 }
 
 .first-page-main-content{
-  position: absolute;
-  top: 180px;
+  font-size: 2vw;
   text-align: left;
   font-family: "Montserrat-Light";
 }
@@ -76,8 +72,6 @@ body {
 .copyright{
   color: #FFF;
 }
-
-
 
 
 /* For Login Page */
