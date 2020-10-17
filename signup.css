@@ -1,0 +1,85 @@
+
+body {
+  font-family: "Montserrat";
+  text-align: center;
+  margin: 0;
+}
+
+/* class for Navbar */
+.color{
+  background-color: #209CEE;
+}
+.title{
+  font-size: 2rem;
+}
+.sub-title {
+  font-size: 1.5em;
+}
+
+
+.title-intro {
+  position: relative;
+  top: 15%;
+  left: 5%;
+  width: 40%;
+}
+
+
+
+.signup-choice-title{
+  padding: 2.5% 15%;
+  color: black;
+}
+.choice-section{
+  margin-top: 11%;
+}
+.signup-page-options-left{
+  /* padding: 2.5% 15%; */
+  padding: 2.5% 5% 8% 15%;
+}
+.signup-page-options-right{
+  /* padding: 2.5% 15%; */
+  padding: 2.5% 15% 8% 5%;
+}
+
+
+/* class for footer section */
+.quick-links{
+  color: #fff;
+  font-size: 2rem;
+  margin: 20px 15px;
+}
+
+.social-icon {
+  color: #FFF;
+  margin: 20px 15px;
+  font-size: 2rem;
+}
+
+.social-icon:hover {
+  color: #150485;
+}
+
+.container-fluid {
+  padding: 1.5% 15%;
+}
+.footer{
+  background-color: #209CEE;
+}
+
+.copyright{
+  color: #FFF;
+}
+
+
+@media (max-width: 992px){
+  .signup-page-options-left{
+    padding: 2.5% 15% 8%;
+    /* padding: 2.5% 5% 2.5% 15%; */
+  }
+  .signup-page-options-right{
+    padding: 2.5% 15% 8%;
+    /* padding: 2.5% 15% 2.5% 5%; */
+  }
+
+}

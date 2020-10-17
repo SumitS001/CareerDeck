@@ -23,77 +23,81 @@
 
 <body>
 
+  <div class="navdiv">
+    <!-- Nav Bar -->
 
-  <!-- Nav Bar -->
 
-  <nav class="navbar navbar-expand-md fixed-top navbar-dark color">
-    <a href="index.html"><img src="favicon2.png" alt="" height="40px" width="40px"></a>
-    <a class="navbar-brand title" href="index.html"> &nbsp; careerDeck</a>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <nav class="navbar navbar-expand-md fixed-top navbar-dark color">
+      <a href="index.html"><img src="favicon2.png" alt="" height="40px" width="40px"></a>
+      <a class="navbar-brand title" href="index.html"> &nbsp; careerDeck</a>
 
-    <div class="collapse navbar-collapse sub-title" id="navbarSupportedContent">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-      <ul class="navbar-nav ml-auto">
+      <div class="collapse navbar-collapse sub-title" id="navbarSupportedContent">
 
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Categories
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item " href="">Developers</a>
-            <a class="dropdown-item " href="">Companies</a>
-          </div>
-        </li>
+        <ul class="navbar-nav ml-auto">
 
-        <li class="nav-item">
-          <a class="nav-link" href="login.html">Login</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="signup.html">Sign Up</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Categories
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item " href="">Developers</a>
+              <a class="dropdown-item " href="">Companies</a>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="signup.html">Sign Up</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+  </div>
 
 
   <!-- About page top section -->
+  <section class="row top-section">
+    <div class="col-lg-6 content-top">
+      <h1>ABOUT US</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+        ex ea commodo consequat.</p>
+      <h1>OUR MISSION</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+        ex ea commodo consequat.</p>
 
-  <section class="about-section">
-    <div class="copyright">
-      <h1 class="about-us-title">ABOUT US</h1>
-      <h3 class="about-us-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-         dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-         ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-         fugiat nulla pariatur.</h3>
     </div>
-
-    <div class="our-mission copyright">
-      <h2 class="about-us-title">OUR MISSION</h2>
-      <h3 class="about-us-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-         dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-         ex ea commodo consequat. </h3>
+    <div class="col-lg-6">
+      <img class = "img-about-us"src="about-us.jpg" alt="">
     </div>
   </section>
 
 
+
   <!-- About page 2nd section profile cards -->
 
-  <section>
+  <section class="profile-cards">
     <h2 class="about-us-title">OUR TEAM</h2>
     <div class="container-fluid bottom-section">
       <div class="row">
 
-        <div class="col-md-4">
+        <div class="col-lg-4 col-md-6">
 
           <div class="card profile-card">
             <div class="card-img-block">
               <img class="img-fluid" src="photos/1a.jpg" alt="Card image cap">
-             </div>
+            </div>
             <div class="card-body pt-5">
-              <img src="photos/1b.jpg" alt="profile-image" class="profile"/>
+              <img src="photos/1b.jpg" alt="profile-image" class="profile" />
               <h5 class="card-title">Nishant Rai</h5>
               <p class="card-text">Persuing BTech from MNNIT Allahabad in Information Technology.</p>
               <div class="icon-block">
@@ -105,42 +109,42 @@
           </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-lg-4 col-md-6">
 
-                    <div class="card profile-card">
-                      <div class="card-img-block">
-                        <img class="img-fluid" src="https://images.pexels.com/photos/946351/pexels-photo-946351.jpeg?w=500&h=650&auto=compress&cs=tinysrgb" alt="Card image cap">
-                       </div>
-                      <div class="card-body pt-5">
-                        <img src="https://randomuser.me/api/portraits/men/64.jpg" alt="profile-image" class="profile"/>
-                        <h5 class="card-title">Sumit Singh</h5>
-                        <p class="card-text">Persuing BTech from MNNIT Allahabad in Electronics and Communication Engineering.</p>
-                        <div class="icon-block">
-                          <a href="https://www.facebook.com/profile.php?id=100006602681552"><i class="fa fa-facebook"></i></a>
-                          <a href="https://twitter.com/SumitSinghss194"> <i class="fa fa-twitter"></i></a>
-                          <a href="https://www.instagram.com/sumit_singh194/?hl=en"> <i class="fa fa-instagram"></i></a>
-                        </div>
-                      </div>
-                    </div>
+          <div class="card profile-card">
+            <div class="card-img-block">
+              <img class="img-fluid" src="https://images.pexels.com/photos/946351/pexels-photo-946351.jpeg?w=500&h=650&auto=compress&cs=tinysrgb" alt="Card image cap">
+            </div>
+            <div class="card-body pt-5">
+              <img src="https://randomuser.me/api/portraits/men/64.jpg" alt="profile-image" class="profile" />
+              <h5 class="card-title">Sumit Singh</h5>
+              <p class="card-text">Persuing BTech from MNNIT Allahabad in Electronics and Communication Engineering.</p>
+              <div class="icon-block">
+                <a href="https://www.facebook.com/profile.php?id=100006602681552"><i class="fa fa-facebook"></i></a>
+                <a href="https://twitter.com/SumitSinghss194"> <i class="fa fa-twitter"></i></a>
+                <a href="https://www.instagram.com/sumit_singh194/?hl=en"> <i class="fa fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-lg-4 col-md-6">
 
-                    <div class="card profile-card">
-                      <div class="card-img-block">
-                        <img class="img-fluid" src="photos/3a.jpg" alt="Card image cap">
-                       </div>
-                      <div class="card-body pt-5">
-                        <img src="photos/3c.jpg" alt="profile-image" class="profile"/>
-                        <h5 class="card-title">Shashank Pandey</h5>
-                        <p class="card-text">Persuing BTech from MNNIT Allahabad in Computer Science Engineering.</p>
-                        <div class="icon-block">
-                          <a href="https://www.facebook.com/profile.php?id=100026412185832"><i class="fa fa-facebook"></i></a>
-                          <a href="#"> <i class="fa fa-twitter"></i></a>
-                          <a href="https://www.instagram.com/shashank088/?hl=en"> <i class="fa fa-instagram"></i></a>
-                        </div>
-                      </div>
-                    </div>
+          <div class="card profile-card">
+            <div class="card-img-block">
+              <img class="img-fluid" src="photos/3a.jpg" alt="Card image cap">
+            </div>
+            <div class="card-body pt-5">
+              <img src="photos/3c.jpg" alt="profile-image" class="profile" />
+              <h5 class="card-title">Shashank Pandey</h5>
+              <p class="card-text">Persuing BTech from MNNIT Allahabad in Computer Science Engineering.</p>
+              <div class="icon-block">
+                <a href="https://www.facebook.com/profile.php?id=100026412185832"><i class="fa fa-facebook"></i></a>
+                <a href="https://twitter.com/Shashan73400119"> <i class="fa fa-twitter"></i></a>
+                <a href="https://www.instagram.com/shashank088/?hl=en"> <i class="fa fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -153,7 +157,7 @@
   <footer class="footer">
     <div class="container-fluid">
       <a class="quick-links" href="about-us.html">About us</a>
-      <a class="quick-links" href="contact us">Contact us</a> <br>
+      <a class="quick-links" href="contact-us.html">Contact us</a> <br>
       <a class="footer-link" href="https://www.facebook.com/CareerDeck-102878701598227/"><i class="social-icon icon fab fa-facebook-f"></i></a>
       <a class="footer-link" href="https://twitter.com/DeckCareer"><i class="social-icon icon fab fa-twitter"></i></a>
       <a class="footer-link" href="https://www.instagram.com/career.deck/?hl=en"><i class="social-icon icon fab fa-instagram"></i></a>

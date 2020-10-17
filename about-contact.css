@@ -1,20 +1,34 @@
-.about-section{
-  position: relative;
-  background-image: url(about-us.jpg);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  margin-top: 5%;
-  height: 40vw;
+.navdiv{
+  margin-bottom: 5%;
 }
 
-.about-us-title {
-  padding: 20px;
+.top-section{
+position: relative;
+margin-top: 5vw;
+padding: 5vw;
+
+}
+p{
+  font-size: 1.5rem;
 }
 
-.our-mission{
-  padding-top: 50px;
+.content-top{
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
+.img-about-us{
+  border-radius: 300%;
+
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.container-fluid{
+
+  padding-top: 5%;
+}
 .bottom-section{
   padding-bottom: 60px;
 }
@@ -70,4 +84,46 @@ h5{
 .profile-card i:hover {
   background-color: #209CEE;
   color:#fff;
+}
+
+@media (max-width: 620px){
+  .content-top{
+    margin-top: 70px;
+    margin-bottom: 50px;
+  }
+  .mid-left{
+    margin-top: 70px;
+    margin-bottom: 50px;
+    padding-bottom: 0;
+  }
+
+  .mid-right{
+    margin-top: 70px;
+    margin-bottom: 50px;
+    padding-top: 0;
+  }
+
+}
+
+
+/* Contact us page */
+
+
+.mid-section{
+  margin-left: 10%;
+  margin-right: 10%;
+
+}
+
+.mid-left{
+  padding: 13% 5% 5%
+}
+
+.mid-right{
+padding: 13% 5% 5%;
+}
+
+.contact-us-img{
+    width: 100%;
+    height: 100%;
 }

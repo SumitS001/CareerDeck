@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>careerDeck | Sign Up</title>
+  <title>careerDeck | About Us</title>
 
   <!-- website icon -->
   <link rel="icon" href="favicon.ico">
@@ -13,18 +13,21 @@
 
   <!-- CSS stylesheet -->
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="about-contact.css">
 
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/b2fd0da17e.js" crossorigin="anonymous"></script>
+
 
 </head>
 
 <body>
 
+
   <!-- Nav Bar -->
 
-  <nav class="navbar navbar-expand-md fixed-top navbar-dark color">
-      <a href="index.html"><img src="favicon2.png" alt="" height="40px" width="40px"></a>
+  <nav class="navbar navbar-expand-md  fixed-top navbar-dark color">
+    <a href="index.html"><img src="favicon2.png" alt="" height="40px" width="40px"></a>
     <a class="navbar-brand title" href="index.html"> &nbsp; careerDeck</a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,49 +61,41 @@
 
 
 
-  <!-- Signup page -->
-  <div class="login-signup">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-5 m-auto">
-          <img src="favicon2.png" alt="icon" height="80px" width="80px">
-          <h1 class="display-5 text-center login-page-title">Signup to careerDeck</h1>
-          <form action="signup-choice.html" method="POST">
-            <div class="form-group">
-              <input type="text" class="form-control form-control-lg" placeholder="Username" name="username" required/>
-            </div>
-            <div class="form-group">
-              <input type="email" class="form-control form-control-lg" placeholder="Email Address" name="email" required/>
-            </div>
-            <div class="form-group">
-              <input type="password" id="password" class="form-control form-control-lg" placeholder="Password" name="password" required/>
-            </div>
-            <div class="form-group">
-              <input type="password" id="confirm-password" class="form-control form-control-lg" placeholder="Confirm Password" name="confirm-password" required/>
-            </div>
-            <div>
-              <label><input type="checkbox" value="Remember Me"> Remember Me</label>
-            </div>
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
-            <br>
-            <h5>Already have an Account <a href="login.html"> Login Here</a></h5>
-            <hr>
-            <div class="form-group">
-              <a href="/auth/google" class="btn btn-lg btn-social btn-google btn-block fab fa-google-plus-g google-button"> | Signup With Google</a>
-            </div>
-            <div class="form-group">
-              <a href="/auth/facebook" class="btn btn-lg btn-social btn-google btn-block fab fa-facebook-f facebook-button"> | Signup With Facebook</a>
-            </div>
-          </form>
-        </div>
-      </div>
+
+  <!-- Section: Contact v.1 -->
+  <section class="row mid-section">
+
+
+    <div class="col-lg-6 mid-left">
+      <h1 class="">CONTACT US</h1>
+      <h6 class=""> Motilal Nehru National Institute of Technology, Allahabad</h6>
+        <h1 class="">How May We Help You?</h1>
+        <form action="Contact-us.html" method="post">
+          <div class="form-group">
+            <label for="userName">User Name</label>
+            <input class="form-control form-control-lg" type="text" name="userName" placeholder="Enter your Username" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Id</label>
+            <input class="form-control form-control-lg" type="text" name="email" placeholder="Enter your Email Id" required>
+          </div>
+          <div class="form-group">
+            <label for="disc">Message</label>
+            <textarea class="form-control form-control-lg" type="text" name="disc" placeholder="Enter your Query" required></textarea>
+          </div>
+          <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+        </form>
     </div>
-  </div>
+
+    <div class="col-lg-6 mid-right">
+      <img class="contact-us-img" src="contact-us.jpg" alt="">
+    </div>
 
 
+  </section>
 
   <!-- Footer part -->
-  <footer class="footer for-login-signup">
+  <footer class="footer">
     <div class="container-fluid">
       <a class="quick-links" href="about-us.html">About us</a>
       <a class="quick-links" href="contact us">Contact us</a> <br>

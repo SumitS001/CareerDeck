@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
   <!-- CSS stylesheet -->
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="signup.css">
 
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/b2fd0da17e.js" crossorigin="anonymous"></script>
@@ -24,7 +24,7 @@
   <!-- Nav Bar -->
 
   <nav class="navbar navbar-expand-md fixed-top navbar-dark color">
-      <a href="index.html"><img src="favicon2.png" alt="" height="40px" width="40px"></a>
+    <a href="index.html"><img src="favicon2.png" alt="" height="40px" width="40px"></a>
     <a class="navbar-brand title" href="index.html"> &nbsp; careerDeck</a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,53 +57,33 @@
 
 
 
-
-  <!-- Signup page -->
-  <div class="login-signup">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-5 m-auto">
-          <img src="favicon2.png" alt="icon" height="80px" width="80px">
-          <h1 class="display-5 text-center login-page-title">Signup to careerDeck</h1>
-          <form action="signup-choice.html" method="POST">
-            <div class="form-group">
-              <input type="text" class="form-control form-control-lg" placeholder="Username" name="username" required/>
-            </div>
-            <div class="form-group">
-              <input type="email" class="form-control form-control-lg" placeholder="Email Address" name="email" required/>
-            </div>
-            <div class="form-group">
-              <input type="password" id="password" class="form-control form-control-lg" placeholder="Password" name="password" required/>
-            </div>
-            <div class="form-group">
-              <input type="password" id="confirm-password" class="form-control form-control-lg" placeholder="Confirm Password" name="confirm-password" required/>
-            </div>
-            <div>
-              <label><input type="checkbox" value="Remember Me"> Remember Me</label>
-            </div>
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
-            <br>
-            <h5>Already have an Account <a href="login.html"> Login Here</a></h5>
-            <hr>
-            <div class="form-group">
-              <a href="/auth/google" class="btn btn-lg btn-social btn-google btn-block fab fa-google-plus-g google-button"> | Signup With Google</a>
-            </div>
-            <div class="form-group">
-              <a href="/auth/facebook" class="btn btn-lg btn-social btn-google btn-block fab fa-facebook-f facebook-button"> | Signup With Facebook</a>
-            </div>
-          </form>
-        </div>
+  <!-- choice section -->
+  <div class="container choice-section">
+    <h1 class="signup-choice-title">How do You Want to Join Us?</h1>
+  </div>
+  <div class="row">
+    <div class="col-lg-6 signup-page-options-left">
+      <div class="card-img-block">
+        <img class="img-fluid" src="photos/Developer.jpg" alt="image" width="400vw">
       </div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">As a Developer</button>
+    </div>
+    <div class="col-lg-6 signup-page-options-right">
+      <div class="card-img-block">
+        <img class="img-fluid" src="photos/Recruiter.jpg" alt="image" width="400vw">
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">As a Recruiter</button>
     </div>
   </div>
 
 
 
+
   <!-- Footer part -->
-  <footer class="footer for-login-signup">
+  <footer class="footer">
     <div class="container-fluid">
       <a class="quick-links" href="about-us.html">About us</a>
-      <a class="quick-links" href="contact us">Contact us</a> <br>
+      <a class="quick-links" href="contact-us.html">Contact us</a> <br>
       <a class="footer-link" href="https://www.facebook.com/CareerDeck-102878701598227/"><i class="social-icon icon fab fa-facebook-f"></i></a>
       <a class="footer-link" href="https://twitter.com/DeckCareer"><i class="social-icon icon fab fa-twitter"></i></a>
       <a class="footer-link" href="https://www.instagram.com/career.deck/?hl=en"><i class="social-icon icon fab fa-instagram"></i></a>
