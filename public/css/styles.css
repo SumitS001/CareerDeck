@@ -34,7 +34,9 @@ body {
 }
 
 .first-page-main-title{
-  font-size: 8vw;
+  position: relative;
+  right: 30px;
+  font-size: 7vw;
   font-family: sans-serif;
 }
 

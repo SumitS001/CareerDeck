@@ -9,13 +9,13 @@ const GoogleStrategy = require("passport-google-oauth20").Strategy;
 const findOrCreate = require("mongoose-findorcreate");
 const FacebookStrategy = require('passport-facebook').Strategy;
 
-
 const app = express();
 
 app.set("view engine","ejs");
 app.use(bodyParser.urlencoded({extended:true}));
 
 app.use(express.static("public"));
+
 
 app.use(session({
     secret: "SumitSingh",
@@ -34,12 +34,10 @@ const userSchema = new mongoose.Schema({
     username: String,
     email: String,
     password: String,
-    accountType: Number,
-    googleId: String,
-    facebookId: String 
+    accountType: Number
 });
 
-userSchema.plugin(passportLocalMongoose);
+userSchema.plugin(passportLocalMongoose, {usernameField: "email"});
 userSchema.plugin(findOrCreate);
 
 const User = new mongoose.model("users",userSchema);
@@ -63,14 +61,15 @@ passport.use(new GoogleStrategy({
     userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo"
   },
   function(accessToken, refreshToken, profile, cb) {
-    User.findOrCreate({ googleId: profile.id }, function (err, user) {
+    var emailaddress = dotr(profile.emails[0].value);
+    User.findOrCreate({ email: emailaddress}, function (err, user) {
       return cb(err, user);
     });
   }
 ));
 
 app.get('/auth/google',
-  passport.authenticate('google', { scope: ['profile'] }));
+  passport.authenticate('google', { scope: ['email'] }));
 
 app.get('/auth/google/secrets', 
   passport.authenticate('google', {
@@ -85,17 +84,20 @@ app.get('/auth/google/secrets',
 passport.use(new FacebookStrategy({
     clientID: process.env.FACEBOOK_APP_ID,
     clientSecret: process.env.FACEBOOK_APP_SECRET,
-    callbackURL: "http://localhost:3000/auth/facebook/callback"
+    callbackURL: "http://localhost:3000/auth/facebook/callback",
+    profileFields: ['id', 'email']
   },
   function(accessToken, refreshToken, profile, done) {
-    User.findOrCreate({facebookId: profile.id}, function(err, user) {
-      if (err) { return done(err); }
+    var emailaddress = dotr(profile.emails[0].value);
+    User.findOrCreate({email: emailaddress}, function(err, user) {
+      console.log(profile);
+        if (err) { return done(err); }
       done(null, user);
     });
   }
 ));
 
-app.get('/auth/facebook', passport.authenticate('facebook'));
+app.get('/auth/facebook', passport.authenticate('facebook',{scope: ["email"]}));
 
 app.get('/auth/facebook/callback',
   passport.authenticate('facebook', { successRedirect: '/dashboard',failureRedirect: '/login' }));
@@ -120,6 +122,19 @@ app.get("/dashboard",function(req,res){
     else res.render("login");
 });
 
+app.get("/about-us",function(req,res){
+  res.render("about-us");
+});
+
+app.get("/contact-us",function(req,res){
+  res.render("contact-us");
+});
+
+app.get("/signup-choice",function(req,res){
+  if(req.isAuthenticated()) res.render("signup-choice");
+    else res.render("login");
+});
+
 app.post("/login",function(req,res){
     const user = new User({
         email: req.body.email,
@@ -139,14 +154,15 @@ app.post("/login",function(req,res){
 });
 
 app.post("/signup",function(req,res){
-    User.register({email: req.body.email, username: req.body.username}, req.body.password, function(err, user){
+    const emailaddress = dotr(req.body.email);
+    User.register({email: emailaddress}, req.body.password, function(err, user){
         if(err){
             console.log(err);
             res.redirect("/signup");
         }
         else{
             passport.authenticate("local")(req, res, function(){
-                res.redirect("/dashboard");
+                res.redirect("/signup-choice");
             });
         };
     });
@@ -162,3 +178,11 @@ app.get("/logout", function(req, res){
 app.listen(3000,function(){
     console.log("Server Started");
 })
+
+
+function dotr(name){
+    var str = name.split('@');
+    str[0] = str[0].replace(/\./g, "");
+    name = str[0] + "@" + str[1];
+    return name;
+}
