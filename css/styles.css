@@ -26,7 +26,7 @@ body {
 /* class for main page content */
 #first{
   position: relative;
-  background-image: url(7.jpg);
+  background-image: url(../7.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
   margin-top: 5%;

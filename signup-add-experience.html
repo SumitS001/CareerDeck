@@ -55,26 +55,42 @@
   </nav>
 
 
+  <!-- Create Profile-->
 
-  <!-- choice section -->
-  <div class="container choice-section">
-    <h1 class="signup-choice-title">How do You Want to Join Us?</h1>
-  </div>
-  <div class="row">
-    <div class="col-lg-6 signup-page-options-left">
-      <div class="card-img-block">
-        <img class="img-fluid" src="photos/Developer.jpg" alt="image" width="400vw">
-      </div>
-      <a href="signup-create-profile.html"><button class="btn btn-lg btn-primary btn-block" type="submit">As a Developer</button></a>
+  <div class="create-profile ">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 m-auto">
+          <a href="signup-create-education.html" class="btn btn-primary">Go Back</a>
+        </div>
+        <div class="col-md-8 m-auto">
+          <a href="signup-create-education.html" class="btn btn-primary">Skip</a>
+        </div>
+        <div class="col-md-8 m-auto">
+          <h1 class="display-4 text-center">Add your Experience</h1>
+          <p class="lead text-center">Your Profile helps you discover the right people and opportunitie</p>
+          <small class="d-block pb-3">* = required field</small>
+          <form action="signup-add-experience.html">
 
-    </div>
-    <div class="col-lg-6 signup-page-options-right">
-      <div class="card-img-block">
-        <img class="img-fluid" src="photos/Recruiter.jpg" alt="image" width="400vw">
+            <div class="form-group">
+              <span class="form-text text-muted">Previous Job Description *</span>
+              <textarea class="form-control form-control-lg" placeholder="Describe Us About Your Previous Job." name="bio" rows="4"></textarea>
+            </div>
+
+            <div class="form-group">
+              <span class="form-text text-muted">Employee Relieving/Experience Letter *</span>
+              <label for="myfile">Select a file:</label>
+              <input type="file" id="myfile" name="myfile"><br><br>
+            </div>
+
+            <input type="submit" class="btn btn-primary btn-block mt-4" />
+          </form>
+
+        </div>
       </div>
-      <a href=""><button class="btn btn-lg btn-primary btn-block" type="submit">As a Recruiter</button></a>
     </div>
   </div>
+
 
 
 

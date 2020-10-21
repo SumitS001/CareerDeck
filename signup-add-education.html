@@ -13,6 +13,7 @@
 
   <!-- CSS stylesheet -->
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/signup.css">
 
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/b2fd0da17e.js" crossorigin="anonymous"></script>
@@ -24,7 +25,7 @@
   <!-- Nav Bar -->
 
   <nav class="navbar navbar-expand-md fixed-top navbar-dark color">
-      <a href="index.html"><img src="favicon2.png" alt="" height="40px" width="40px"></a>
+    <a href="index.html"><img src="favicon2.png" alt="" height="40px" width="40px"></a>
     <a class="navbar-brand title" href="index.html"> &nbsp; careerDeck</a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,52 +47,85 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="login.html">Login</a>
+          <a class="nav-link" href="index.html">Logout</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="signup.html">Sign Up</a>
-        </li>
+
       </ul>
     </div>
   </nav>
 
 
+  <!-- Create Profile-->
 
-
-  <!-- Signup page -->
-  <div class="login-signup">
+  <div class="create-profile ">
     <div class="container">
       <div class="row">
-        <div class="col-md-5 m-auto">
-          <img src="favicon2.png" alt="icon" height="80px" width="80px">
-          <h1 class="display-5 text-center login-page-title">Signup to careerDeck</h1>
-          <form action="signup-choice.html" method="POST">
+        <div class="col-md-8 m-auto">
+          <a href="signup-create-profile.html" class="btn btn-primary">Go Back</a>
+          <h1 class="display-4 text-center">Add your Education</h1>
+          <p class="lead text-center">Your Profile helps you discover the right people and opportunities</p>
+          <small class="d-block pb-3">* = required field</small>
+          <form action="signup-add-experience.html">
+
             <div class="form-group">
-              <input type="text" class="form-control form-control-lg" placeholder="Username" name="username" required/>
+              <small class="form-text text-muted">College/University *</small>
+              <input type="text" class="form-control form-control-lg" placeholder="Enter your College/University" name="college_university" required />
             </div>
+
             <div class="form-group">
-              <input type="email" class="form-control form-control-lg" placeholder="Email Address" name="email" required/>
+              <small class="form-text text-muted">Degree *</small>
+              <input type="text" class="form-control form-control-lg" placeholder="Enter your Degree" name="degree" required />
             </div>
+
             <div class="form-group">
-              <input type="password" id="password" class="form-control form-control-lg" placeholder="Password" name="password" required/>
+              <small class="form-text text-muted">Specialization *</small>
+              <input type="text" class="form-control form-control-lg" placeholder="Specialization" name="Specialization" required />
             </div>
+
             <div class="form-group">
-              <input type="password" id="confirm-password" class="form-control form-control-lg" placeholder="Confirm Password" name="confirm-password" required/>
+              <small class="form-text text-muted">Start Year *</small>
+              <input type="number" class="form-control form-control-lg" placeholder="Start Year" name="start_year" required />
             </div>
-            <div>
-              <label><input type="checkbox" value="Remember Me"> Remember Me</label>
-            </div>
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
-            <br>
-            <h5>Already have an Account <a href="login.html"> Login Here</a></h5>
-            <hr>
+
             <div class="form-group">
-              <a href="/auth/google" class="btn btn-lg btn-social btn-google btn-block fab fa-google-plus-g google-button"> | Signup With Google</a>
+              <small class="form-text text-muted">End Year *</small>
+              <input type="number" class="form-control form-control-lg" placeholder="End Year" name="end_year" required />
             </div>
+
+            <div class="mb-3" style="padding-top : 6%">
+              <button type="button" class="btn btn-light">Additional Courses/Qualifications</button>
+              <span class="text-muted">Optional</span>
+            </div>
+
             <div class="form-group">
-              <a href="/auth/facebook" class="btn btn-lg btn-social btn-google btn-block fab fa-facebook-f facebook-button"> | Signup With Facebook</a>
+              <small class="form-text text-muted">College/University</small>
+              <input type="text" class="form-control form-control-lg" placeholder="Enter your College/University" name="college_university"  />
             </div>
+
+            <div class="form-group">
+              <small class="form-text text-muted">Degree</small>
+              <input type="text" class="form-control form-control-lg" placeholder="Enter your Degree" name="degree" />
+            </div>
+
+            <div class="form-group">
+              <small class="form-text text-muted">Specialization</small>
+              <input type="text" class="form-control form-control-lg" placeholder="Specialization" name="Specialization" />
+            </div>
+
+            <div class="form-group">
+              <small class="form-text text-muted">Start Year</small>
+              <input type="number" class="form-control form-control-lg" placeholder="Start Year" name="start_year"/>
+            </div>
+
+            <div class="form-group">
+              <small class="form-text text-muted">End Year</small>
+              <input type="number" class="form-control form-control-lg" placeholder="End Year" name="end_year" />
+            </div>
+
+
+            <input type="submit" class="btn btn-primary btn-block mt-4" />
           </form>
+
         </div>
       </div>
     </div>
@@ -99,11 +133,13 @@
 
 
 
+
+
   <!-- Footer part -->
-  <footer class="footer for-login-signup">
+  <footer class="footer">
     <div class="container-fluid">
       <a class="quick-links" href="about-us.html">About us</a>
-      <a class="quick-links" href="contact us">Contact us</a> <br>
+      <a class="quick-links" href="contact-us.html">Contact us</a> <br>
       <a class="footer-link" href="https://www.facebook.com/CareerDeck-102878701598227/"><i class="social-icon icon fab fa-facebook-f"></i></a>
       <a class="footer-link" href="https://twitter.com/DeckCareer"><i class="social-icon icon fab fa-twitter"></i></a>
       <a class="footer-link" href="https://www.instagram.com/career.deck/?hl=en"><i class="social-icon icon fab fa-instagram"></i></a>
