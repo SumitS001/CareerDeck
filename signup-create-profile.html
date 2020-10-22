@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>careerDeck | Sign Up</title>
+
+  <!-- website icon -->
+  <link rel="icon" href="favicon.ico">
+
+  <!-- Bootstrap style sheet-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <!-- CSS stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/signup.css">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/b2fd0da17e.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+  <!-- Nav Bar -->
+
+  <nav class="navbar navbar-expand-md fixed-top navbar-dark color">
+    <a href="index.html"><img src="favicon2.png" alt="" height="40px" width="40px"></a>
+    <a class="navbar-brand title" href="index.html"> &nbsp; careerDeck</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse sub-title" id="navbarSupportedContent">
+
+      <ul class="navbar-nav ml-auto">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Categories
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item " href="">Developers</a>
+            <a class="dropdown-item " href="">Companies</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Logout</a>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- Create Profile-->
+
+  <div class="create-profile ">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 m-auto">
+          <a href="signup-choice.html" class=" btn btn-primary">Go Back</a>
+          <h1 class="display-4 text-center">Create Your Profile</h1>
+          <p class="lead text-center">Let's get some information to make your profile stand out</p>
+          <small class="d-block pb-3">* = required field</small>
+          <form action="signup-add-education.html">
+
+              <div class="form-group">
+                <small class="form-text text-muted">Your First Name *</small>
+                <input type="text" class="form-control form-control-lg" placeholder="First Name" name="first_name" required />
+              </div>
+
+              <div class="form-group">
+                <small class="form-text text-muted">Your Last Name *</small>
+                <input type="text" class="form-control form-control-lg" placeholder="Last Name" name="last_name" required />
+              </div>
+
+              <div class="form-group">
+                <small class="form-text text-muted">DOB - dd/mm/yyyy *</small>
+                <input type="date" class="form-control form-control-lg" placeholder="Date Of Birth" name="dob" required />
+              </div>
+
+              <div class="form-group">
+                <small class="form-text text-muted">Gender *</small>
+                <select class="form-control form-control-lg" name="gender" required>
+                  <option value="0">Select Gender</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <small class="form-text text-muted">Country *</small>
+                <input type="text" class="form-control form-control-lg" placeholder="Country" name="country" required />
+              </div>
+
+              <div class="form-group">
+                <small class="form-text text-muted">State *</small>
+                <input type="text" class="form-control form-control-lg" placeholder="State" name="state" required />
+              </div>
+
+              <div class="form-group">
+                <small class="form-text text-muted">City *</small>
+                <input type="text" class="form-control form-control-lg" placeholder="City" name="city" required />
+              </div>
+
+              <div class="form-group">
+                <small class="form-text text-muted">Your Personal Address *</small>
+                <input type="text" class="form-control form-control-lg" placeholder="1st Address" name="address" required />
+              </div>
+
+              <div class="form-group">
+                <small class="form-text text-muted">Your Work Address</small>
+                <input type="text" class="form-control form-control-lg" placeholder="2nd Address" name="address"/>
+              </div>
+
+              <div class="form-group">
+                <small class="form-text text-muted">Please use comma separated values (eg. HTML,CSS,JavaScript,PHP)</small>
+                <input type="text" class="form-control form-control-lg" placeholder="Skills" name="skills" />
+              </div>
+
+              <div class="form-group">
+                <small class="form-text text-muted">If you want your latest repos and a Github link, include your username</small>
+                <input type="text" class="form-control form-control-lg" placeholder="Github Username" name="githubusername" />
+              </div>
+
+              <div class="form-group">
+                <small class="form-text text-muted">Tell us a little about yourself</small>
+                <textarea class="form-control form-control-lg" placeholder="A short bio of yourself" name="bio"></textarea>
+              </div>
+
+              <div class="mb-3" style="padding-top : 6%">
+                <button type="button" class="btn btn-light">Add Social Network Links</button>
+                <span class="text-muted">Optional</span>
+              </div>
+
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="fab fa-twitter"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control form-control-lg" placeholder="Twitter Profile URL" name="twitter" />
+            </div>
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="fab fa-facebook"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control form-control-lg" placeholder="Facebook Page URL" name="facebook" />
+            </div>
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="fab fa-instagram"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control form-control-lg" placeholder="Instagram Page URL" name="instagram" />
+            </div>
+
+            <input type="submit" class="btn btn-primary btn-block mt-4" />
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- Footer part -->
+  <footer class="footer">
+    <div class="container-fluid">
+      <a class="quick-links" href="about-us.html">About us</a>
+      <a class="quick-links" href="contact-us.html">Contact us</a> <br>
+      <a class="footer-link" href="https://www.facebook.com/CareerDeck-102878701598227/"><i class="social-icon icon fab fa-facebook-f"></i></a>
+      <a class="footer-link" href="https://twitter.com/DeckCareer"><i class="social-icon icon fab fa-twitter"></i></a>
+      <a class="footer-link" href="https://www.instagram.com/career.deck/?hl=en"><i class="social-icon icon fab fa-instagram"></i></a>
+      <p>© Copyright 2020 caererDeck</p>
+
+    </div>
+  </footer>
+
+
+  <!-- Bootstrap Scripts-->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

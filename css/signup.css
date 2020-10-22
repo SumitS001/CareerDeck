@@ -16,7 +16,6 @@ body {
   font-size: 1.5em;
 }
 
-
 .title-intro {
   position: relative;
   top: 15%;
@@ -41,6 +40,18 @@ body {
   /* padding: 2.5% 15%; */
   padding: 2.5% 15% 8% 5%;
 }
+
+
+
+/* For signup-create-profile */
+.create-profile{
+  text-align: left;
+  margin: 50px;
+}
+.d-block{
+  color: red;
+}
+
 
 
 /* class for footer section */
@@ -81,5 +92,25 @@ body {
     padding: 2.5% 15% 8%;
     /* padding: 2.5% 15% 2.5% 5%; */
   }
+}
+
+/* signup add experience */
+.btn-section{
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+.skip-btn-div{
+ padding-left: 40%;
+}
+.btn-go-back{
+  width: 100px;
+  height: 40px;
+
+}
+.btn-skip{
+  width: 100px;
+  height: 40px;
 
 }
