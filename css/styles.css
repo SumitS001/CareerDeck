@@ -67,6 +67,7 @@ body {
 }
 .footer{
   background-color: #209CEE;
+  position: relative;
 }
 
 .copyright{
@@ -102,4 +103,19 @@ hr{
 .facebook-button{
   color: #fff;
   background-color: #3b5998;
+}
+
+
+
+.job-listing{
+  position: relative;
+  padding: 10px;
+  margin: 10px;
+  width: 80%;
+  left: 10%;
+  text-align: left;
+}
+
+.search{
+  padding-top: 10px;
 }
