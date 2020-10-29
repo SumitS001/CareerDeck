@@ -104,6 +104,11 @@ body {
 .skip-btn-div{
  padding-left: 40%;
 }
+.back-btn-div{
+  padding-left: 0;
+  text-align: left;
+}
+
 .btn-go-back{
   width: 100px;
   height: 40px;
