@@ -67,6 +67,7 @@ body {
 }
 .footer{
   background-color: #209CEE;
+  position: relative;
 }
 
 .copyright{
@@ -102,4 +103,36 @@ hr{
 .facebook-button{
   color: #fff;
   background-color: #3b5998;
+}
+
+
+
+.job-listing{
+  position: relative;
+  padding: 10px;
+  margin: 10px;
+  width: 80%;
+  left: 10%;
+  text-align: left;
+}
+
+.search{
+  padding-top: 10px;
+}
+
+/* EDIT DEVELOPER PROFILE */
+.edit-developer-profile{
+  margin-top: 20px;
+}
+
+.heads_edit{
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+
+/* POST A JOB */
+
+.left-col-jobpost{
+  text-align: left;
 }

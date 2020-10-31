@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>careerDeck</title>
+
+  <!-- website icon -->
+  <link rel="icon" href="favicon.ico">
+
+  <!-- Bootstrap style sheet-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <!-- CSS stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/home.css">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/b2fd0da17e.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+  <!-- Nav Bar -->
+  <nav class="navbar navbar-expand-md sticky-top navbar-dark color" style="display: ">
+    <a href="/"><img src="favicon2.png" alt="" height="40px" width="40px"></a>
+    <a class="navbar-brand title" href="/">&nbsp; careerDeck</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse sub-title" id="navbarSupportedContent">
+
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Jobs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Messages</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Profile
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item " href="">Edit Profile</a>
+            <a class="dropdown-item " href="">Logout</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+
+
+
+
+
+  <div class="ftco-section bg-light">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-md-12 col-lg-8 mb-5 left-col-jobpost">
+
+  			     <form action="#" class="p-5 bg-white">
+
+               <div class="row form-group">
+                 <div class="col-md-12 mb-3 mb-md-0">
+                   <label class="font-weight-bold" for="fullname">Salary and Its Description </label>
+                   <input type="text" id="fullname" class="form-control" placeholder="eg. $1000 per month">
+                 </div>
+               </div>
+
+
+                <div class="row form-group">
+                  <div class="col-md-12 mb-3 mb-md-0">
+                    <label class="font-weight-bold" for="fullname">Job Title</label>
+                    <input type="text" id="fullname" class="form-control" placeholder="eg. Professional UI/UX Designer">
+                  </div>
+                </div>
+
+                <div class="row form-group mb-5">
+                  <div class="col-md-12 mb-3 mb-md-0">
+                    <label class="font-weight-bold" for="fullname">Company</label>
+                    <input type="text" id="fullname" class="form-control" placeholder="eg. Facebook, Inc.">
+                  </div>
+                </div>
+
+
+                <div class="row form-group">
+                  <div class="col-md-12"><h3>Job Type</h3></div>
+                  <div class="col-md-12 mb-3 mb-md-0">
+                    <label for="option-job-type-1">
+                      <input type="radio" id="option-job-type-1" name="job-type"> Full Time
+                    </label>
+                  </div>
+                  <div class="col-md-12 mb-3 mb-md-0">
+                    <label for="option-job-type-2">
+                      <input type="radio" id="option-job-type-2" name="job-type"> Part Time
+                    </label>
+                  </div>
+
+                  <div class="col-md-12 mb-3 mb-md-0">
+                    <label for="option-job-type-3">
+                      <input type="radio" id="option-job-type-3" name="job-type"> Freelance
+                  </label></div>
+                  <div class="col-md-12 mb-3 mb-md-0">
+                    <label for="option-job-type-4">
+                      <input type="radio" id="option-job-type-4" name="job-type"> Internship
+                    </label>
+                  </div>
+                  <div class="col-md-12 mb-3 mb-md-0">
+                    <label for="option-job-type-4">
+                      <input type="radio" id="option-job-type-4" name="job-type"> Termporary
+                    </label>
+                  </div>
+
+                </div>
+
+                <div class="row form-group mb-4">
+                  <div class="col-md-12"><h3>Location</h3></div>
+                  <div class="col-md-12 mb-3 mb-md-0">
+                    <input type="text" class="form-control" placeholder="Western City, UK
+  ">
+                  </div>
+                </div>
+
+                <div class="row form-group">
+                  <div class="col-md-12"><h3>Job Description</h3></div>
+                  <div class="col-md-12 mb-3 mb-md-0">
+                    <textarea name="" class="form-control" id="" cols="30" rows="5"></textarea>
+                  </div>
+                </div>
+
+
+
+                <div class=" row form-group">
+                  <div class="col-md-12"><h3>Rules and Policies</h3></div>
+                  <label for="myfile">Select and upload a document conatining detailed rules and policies :</label>
+                  <input type="file" id="myfile" name="myfile"><br><br>
+                </div>
+
+                <div class="row form-group">
+                  <div class="col-md-12">
+                    <input type="submit" value="Post" class="btn btn-primary  py-2 px-5">
+                  </div>
+                </div>
+
+
+              </form>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="p-4 mb-3 bg-white">
+                <h3 class="h5 text-black mb-3">Contact Info</h3>
+                <p class="mb-0 font-weight-bold">Address</p>
+                <p class="mb-4">203 Fake St. Mountain View, San Francisco, California, USA</p>
+
+                <p class="mb-0 font-weight-bold">Phone</p>
+                <p class="mb-4"><a href="#">+1 232 3235 324</a></p>
+
+                <p class="mb-0 font-weight-bold">Email Address</p>
+                <p class="mb-0"><a href="#"><span class="__cf_email__" data-cfemail="671e081215020a060e0b2703080a060e094904080a">[email&nbsp;protected]</span></a></p>
+
+              </div>
+
+              <div class="p-4 mb-3 bg-white">
+                <h3 class="h5 text-black mb-3">More Info</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ad iure porro mollitia architecto hic consequuntur. Distinctio nisi perferendis dolore, ipsa consectetur</p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+  <footer class="footer">
+    <!-- Footer part -->
+    <div class="container-fluid">
+      <a class="quick-links" href="/about-us">About us</a>
+      <a class="quick-links" href="/contact-us">Contact us</a> <br>
+      <a class="footer-link" href="https://www.facebook.com/CareerDeck-102878701598227/"><i class="social-icon icon fab fa-facebook-f"></i></a>
+      <a class="footer-link" href="https://twitter.com/DeckCareer"><i class="social-icon icon fab fa-twitter"></i></a>
+      <a class="footer-link" href="https://www.instagram.com/career.deck/?hl=en"><i class="social-icon icon fab fa-instagram"></i></a>
+      <p class="copyright">© Copyright 2020 careerDeck</p>
+
+    </div>
+  </footer>
+
+  <!-- Bootstrap Scripts-->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

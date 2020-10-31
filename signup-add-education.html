@@ -24,7 +24,7 @@
 
   <!-- Nav Bar -->
 
-  <nav class="navbar navbar-expand-md fixed-top navbar-dark color">
+  <nav class="navbar navbar-expand-md sticky-top navbar-dark color">
     <a href="index.html"><img src="favicon2.png" alt="" height="40px" width="40px"></a>
     <a class="navbar-brand title" href="index.html"> &nbsp; careerDeck</a>
 
@@ -84,13 +84,14 @@
 
             <div class="form-group">
               <small class="form-text text-muted">Start Year *</small>
-              <input type="number" class="form-control form-control-lg" placeholder="Start Year" name="start_year" required />
+              <input type="number" min="1960" max="2020" value="1960" class="form-control form-control-lg" placeholder="Start Year" name="start_year" required />
             </div>
 
             <div class="form-group">
               <small class="form-text text-muted">End Year *</small>
-              <input type="number" class="form-control form-control-lg" placeholder="End Year" name="end_year" required />
+              <input type="number" min="1960" max="2024" value="1960" class="form-control form-control-lg" placeholder="End Year" name="end_year" required />
             </div>
+
 
             <div class="mb-3" style="padding-top : 6%">
               <button type="button" class="btn btn-light">Additional Courses/Qualifications</button>

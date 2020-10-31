@@ -46,8 +46,10 @@ body {
 /* For signup-create-profile */
 .create-profile{
   text-align: left;
-  margin: 8%;
-
+  margin: 50px;
+}
+.d-block{
+  color: red;
 }
 
 
@@ -90,9 +92,30 @@ body {
     padding: 2.5% 15% 8%;
     /* padding: 2.5% 15% 2.5% 5%; */
   }
+}
 
+/* signup add experience */
+.btn-section{
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+.skip-btn-div{
+ padding-left: 40%;
+}
+.back-btn-div{
+  padding-left: 0;
+  text-align: left;
+}
 
-  .create-profile{
-    margin-top: 100px;
-  }
+.btn-go-back{
+  width: 100px;
+  height: 40px;
+
+}
+.btn-skip{
+  width: 100px;
+  height: 40px;
+
 }
