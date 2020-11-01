@@ -1,0 +1,44 @@
+<%- include('partials/header2') %>
+<link rel="stylesheet" href="css/job-search.css">
+<div class="container table-responsive result-body col-lg-12 search-body card-body card card-margin col-12 row">
+  <table class="table widget-26">
+    <tbody>
+      <% post.forEach(function(jobs){ %>
+      <tr>
+        <td>
+          <div class="widget-26-job-emp-img">
+            <img src="https://bootdey.com/img/Content/avatar/avatar5.png" alt="Company" />
+          </div>
+        </td>
+        <td>
+          <div class="widget-26-job-title">
+            <p><%= jobs.name %> </p>
+            <p class="m-0" class="employer-name"><%= jobs.company %></p>
+          </div>
+        </td>
+        <td>
+          <div class="widget-26-job-info">
+            <p class="type m-0"><%= jobs.jobType %> </p>
+            <p class="text-muted m-0" class="location">in <%= jobs.location %></p>
+          </div>
+        </td>
+        <td>
+          <div class="widget-26-job-salary"><%= jobs.salary %></div>
+        </td>
+        <td>
+          <div class="job-right my-4 flex-shrink-0">
+            <form action="/apply" method="POST">
+              <button type="submit" name="jobid" value=<%= jobs._id %>>Apply now</button>
+            </form>
+            </form>
+        </td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</div>
+
+
+<footer class="footer">
+  <!-- Footer part -->
+  <%- include('partials/footer') %>

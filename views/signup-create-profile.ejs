@@ -1,0 +1,130 @@
+<%- include('partials/header2') %>
+
+<!-- Create Profile-->
+
+<div class="create-profile ">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 m-auto">
+        <a href="/signup" class=" btn btn-primary">Go Back</a>
+        <h1 class="display-4 text-center">Create Your Profile</h1>
+        <p class="lead text-center">Let's get some information to make your profile stand out</p>
+        <small class="d-block pb-3">* = required field</small>
+        <form action="/create-profile" method="POST">
+
+          <div class="form-group">
+            <small class="form-text text-muted">Your First Name *</small>
+            <input type="text" class="form-control form-control-lg" placeholder="First Name" name="first_name"
+              required />
+          </div>
+
+          <div class="form-group">
+            <small class="form-text text-muted">Your Last Name *</small>
+            <input type="text" class="form-control form-control-lg" placeholder="Last Name" name="last_name" required />
+          </div>
+
+          <div class="form-group">
+            <small class="form-text text-muted">DOB - dd/mm/yyyy *</small>
+            <input type="date" class="form-control form-control-lg" placeholder="Date Of Birth" name="dob" required />
+          </div>
+
+          <div class="form-group">
+            <small class="form-text text-muted">Gender *</small>
+            <select class="form-control form-control-lg" name="gender" required>
+              <option value="0">Select Gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <small class="form-text text-muted">Country *</small>
+            <input type="text" class="form-control form-control-lg" placeholder="Country" name="country" required />
+          </div>
+
+          <div class="form-group">
+            <small class="form-text text-muted">State *</small>
+            <input type="text" class="form-control form-control-lg" placeholder="State" name="state" required />
+          </div>
+
+          <div class="form-group">
+            <small class="form-text text-muted">City *</small>
+            <input type="text" class="form-control form-control-lg" placeholder="City" name="city" required />
+          </div>
+
+          <div class="form-group">
+            <small class="form-text text-muted">Your Personal Address *</small>
+            <input type="text" class="form-control form-control-lg" placeholder="1st Address" name="address" required />
+          </div>
+
+          <div class="form-group">
+            <small class="form-text text-muted">Your Work Address</small>
+            <input type="text" class="form-control form-control-lg" placeholder="2nd Address" name="address1" />
+          </div>
+
+          <div class="form-group">
+            <small class="form-text text-muted">Please use comma separated values (eg. HTML,CSS,JavaScript,PHP)</small>
+            <input type="text" class="form-control form-control-lg" placeholder="Skills" name="skills" />
+          </div>
+
+          <div class="form-group">
+            <small class="form-text text-muted">If you want your latest repos and a Github link, include your
+              username</small>
+            <input type="text" class="form-control form-control-lg" placeholder="Github Username"
+              name="githubusername" />
+          </div>
+
+          <div class="form-group">
+            <small class="form-text text-muted">Tell us a little about yourself</small>
+            <textarea class="form-control form-control-lg" placeholder="A short bio of yourself" name="bio"></textarea>
+          </div>
+
+          <div class="mb-3" style="padding-top : 6%">
+            <button type="button" class="btn btn-light">Add Social Network Links</button>
+            <span class="text-muted">Optional</span>
+          </div>
+
+
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <i class="fab fa-twitter"></i>
+              </span>
+            </div>
+            <input type="text" class="form-control form-control-lg" placeholder="Twitter Profile URL" name="twitter" />
+          </div>
+
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <i class="fab fa-facebook"></i>
+              </span>
+            </div>
+            <input type="text" class="form-control form-control-lg" placeholder="Facebook Page URL" name="facebook" />
+          </div>
+
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <i class="fab fa-instagram"></i>
+              </span>
+            </div>
+            <input type="text" class="form-control form-control-lg" placeholder="Instagram Page URL" name="instagram" />
+          </div>
+
+          <input type="submit" class="btn btn-primary btn-block mt-4" />
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- Footer part -->
+<footer class="footer">
+  <%- include('partials/footer') %>

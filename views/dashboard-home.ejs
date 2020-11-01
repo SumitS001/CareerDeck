@@ -1,0 +1,90 @@
+<%- include('partials/header2') %>
+<link rel="stylesheet" href="css/home.css">
+<% profile %>
+<% user %>
+<% post %>
+<div class="container">
+    <div class="profile-page tx-13">
+        <div class="row">
+            <div class="col-12 grid-margin">
+                <div class="profile-header">
+                    <div class="cover">
+                        <div class="gray-shade"></div>
+                        <div class="cover-body d-flex justify-content-between align-items-center">
+                            <div>
+                                <img class="profile-pic" src="https://bootdey.com/img/Content/avatar/avatar6.png"
+                                    alt="profile">
+                                <span class="profile-name"><%= profile.firstName +" "+ profile.lastName %> </span>
+                            </div>
+                            <div class="d-none d-md-block">
+                                <a href="/edit-profile-developer">
+                                    <button class="btn btn-primary btn-icon-text btn-edit-profile">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"
+                                            class="feather feather-edit btn-icon-prepend">
+                                            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                                        </svg> Edit profile
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row profile-body">
+            <!-- left wrapper start -->
+            <div class="d-none d-md-block col-md-4 col-xl-3 left-wrapper">
+                <div class="card rounded">
+                    <div class="card-body">
+                        <p><%= profile.bio %> </p>
+                        <div class="mt-3">
+                            <label class="tx-11 font-weight-bold mb-0 text-uppercase">Joined:</label>
+                            <p class="text-muted"><%= profile.doj %></p>
+                        </div>
+                        <div class="mt-3">
+                            <label class="tx-11 font-weight-bold mb-0 text-uppercase">Lives:</label>
+                            <p class="text-muted"><%= profile.city +", "+ profile.country %></p>
+                        </div>
+                        <div class="mt-3">
+                            <label class="tx-11 font-weight-bold mb-0 text-uppercase">Email:</label>
+                            <p class="text-muted"><%= user.email %> </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- left wrapper end -->
+            <!-- middle wrapper start -->
+            <div class="col-md-8 col-xl-6 middle-wrapper">
+                <div class="row">
+                    <%  post.forEach(function(list){ %>
+                    <div class="col-md-12 grid-margin">
+                        <div class="card rounded">
+                            <div class="card-header">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="d-flex align-items-center">
+                                        <h5>Job Title</h5>
+                                        <div class="ml-2">
+                                            <p><%= list.name %> </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <h5>Job Description</h5>
+                                <p class="mb-3 tx-14"><%= list.description %> </p>
+                            </div>
+                        </div>
+                    </div>
+                    <% }); %>
+                </div>
+            </div>
+
+            <!-- middle wrapper end -->
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <%- include('partials/footer') %>

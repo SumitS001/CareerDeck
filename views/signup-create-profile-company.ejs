@@ -1,0 +1,96 @@
+<%- include('partials/headerc') %>
+
+<!-- Create Profile-->
+
+<div class="create-profile ">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 m-auto">
+        <a href="signup-choice.html" class=" btn btn-primary">Go Back</a>
+        <h1 class="display-4 text-center">Create Comapny's Profile</h1>
+        <p class="lead text-center">Let's get some information to make your profile stand out</p>
+        <small class="d-block pb-3">
+          <h5>* = required field</h5>
+        </small>
+        <form action="/signup-add-education" method="POST">
+
+          <div class="form-group">
+            <small class="form-text text-muted">Company Name *</small>
+            <input type="text" class="form-control form-control-lg" placeholder="Company Name" name="company_name"
+              required />
+          </div>
+
+          <div class="form-group">
+            <small class="form-text text-muted">Comapny Description *</small>
+            <textarea class="form-control form-control-lg" placeholder="Describe your Company" name="bio"
+              rows="3"></textarea>
+          </div>
+
+          <div class="form-group">
+            <small class="form-text text-muted">Year of Establishment *</small>
+            <input type="number" class="form-control form-control-lg" placeholder="Year of Establishment"
+              name="year_of_establishment" required />
+          </div>
+
+          <div class="form-group">
+            <small class="form-text text-muted">Company Website *</small>
+            <input type="text" class="form-control form-control-lg" placeholder="Website URL" name="company_website" />
+          </div>
+
+          <div class="form-group">
+            <small class="form-text text-muted">Head Office Address *</small>
+            <input type="text" class="form-control form-control-lg" placeholder="Company Address" name="company_address"
+              required />
+          </div>
+
+
+          <div class="mb-3" style="padding-top : 6%">
+            <h3>Attach the Following Documents</h3>
+          </div>
+
+          <div class="form-group">
+            <span class="form-text text-muted">Company Incorporation Certificate *</span>
+            <label for="myfile">Select Company Incorporation Certificate :</label>
+            <input type="file" id="myfile" name="myfile"><br><br>
+          </div>
+
+          <div class="form-group">
+            <span class="form-text text-muted">Memorandum of Association *</span>
+            <label for="myfile">Select M o A :</label>
+            <input type="file" id="myfile" name="myfile"><br><br>
+          </div>
+
+          <div class="form-group">
+            <span class="form-text text-muted">Articles of Association *</span>
+            <label for="myfile">Select A o A:</label>
+            <input type="file" id="myfile" name="myfile"><br><br>
+          </div>
+
+          <div class="form-group">
+            <span class="form-text text-muted">Digital Signature Certificates *</span>
+            <label for="myfile">Select DSC:</label>
+            <input type="file" id="myfile" name="myfile"><br><br>
+          </div>
+
+          <div class="form-group">
+            <span class="form-text text-muted"> Director Identification Number *</span>
+            <label for="myfile">Select DIN :</label>
+            <input type="file" id="myfile" name="myfile"><br><br>
+          </div>
+
+
+          <input type="submit" class="btn btn-primary btn-block mt-4" />
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- Footer part -->
+<footer class="footer">
+  <%- include('partials/footer') %>

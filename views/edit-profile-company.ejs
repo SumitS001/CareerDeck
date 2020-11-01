@@ -1,0 +1,157 @@
+<%- include('partials/headerc') %>
+
+
+<!-- Edit Profile-->
+
+<div class="edit-developer-profile">
+  <div class="row btn-section">
+    <div class="col col-lg-6 col-md-6 col-sm-6 back-btn-div">
+      <a href="/dashboard-home" class="btn btn-primary btn-go-back">Go Back</a>
+    </div>
+
+  </div>
+  <div class="create-profile ">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 m-auto">
+          <h1 class="display-4 text-center">Edit company's Profile</h1>
+          <p class="lead text-center">Edit the information to make company's profile stand out</p>
+          <form action="/edit-profile-company" method="POST">
+
+            <div class="form-group">
+              <span class="form-text text-muted">Change/Add profile picture/logo for company</span>
+              <label for="myfile">Select a file:</label>
+              <input type="file" id="myfile" name="myfile"><br><br>
+            </div>
+
+            <div class="form-group">
+              <small class="form-text text-muted">Edit company's name </small>
+              <input type="text" class="form-control form-control-lg" placeholder="Company's name" name="Company's name"
+                required />
+            </div>
+
+            <div class="form-group">
+              <small class="form-text text-muted">Edit Comapny's description </small>
+              <input type="text" class="form-control form-control-lg" placeholder="Description" name="Description"
+                required />
+            </div>
+
+            <div class="form-group">
+              <small class="form-text text-muted">Edit Year of Establishment *</small>
+              <input type="number" class="form-control form-control-lg" placeholder="Year of Establishment"
+                name="year_of_establishment" required />
+            </div>
+
+            <div class="form-group">
+              <small class="form-text text-muted">Edit Company's Website *</small>
+              <input type="text" class="form-control form-control-lg" placeholder="Website URL"
+                name="company_website" />
+            </div>
+
+            <div class="form-group">
+              <small class="form-text text-muted">Edit Company's Email *</small>
+              <input type="text" class="form-control form-control-lg" placeholder="Company Email"
+                name="company_email" />
+            </div>
+
+            <div class="form-group">
+              <small class="form-text text-muted">Edit Head Office Address *</small>
+              <input type="text" class="form-control form-control-lg" placeholder="Company Address"
+                name="company_address" required />
+            </div>
+
+            <div class="mb-3" style="padding-top : 6%">
+              <h4>Edit/Update/Change the Following Documents</h4>
+            </div>
+
+            <div class="form-group">
+              <span class="form-text text-muted">Edit Company Incorporation Certificate *</span>
+              <label for="myfile">Select Company Incorporation Certificate :</label>
+              <input type="file" id="myfile" name="myfile"><br><br>
+            </div>
+
+            <div class="form-group">
+              <span class="form-text text-muted">Edit Memorandum of Association *</span>
+              <label for="myfile">Select M o A :</label>
+              <input type="file" id="myfile" name="myfile"><br><br>
+            </div>
+
+            <div class="form-group">
+              <span class="form-text text-muted">Edit Articles of Association *</span>
+              <label for="myfile">Select A o A:</label>
+              <input type="file" id="myfile" name="myfile"><br><br>
+            </div>
+
+            <div class="form-group">
+              <span class="form-text text-muted">Edit Digital Signature Certificates *</span>
+              <label for="myfile">Select DSC:</label>
+              <input type="file" id="myfile" name="myfile"><br><br>
+            </div>
+
+            <div class="form-group">
+              <span class="form-text text-muted">Edit Director Identification Number *</span>
+              <label for="myfile">Select DIN :</label>
+              <input type="file" id="myfile" name="myfile"><br><br>
+            </div>
+
+            <div class="mb-3" style="padding-top : 6%">
+              <h4>Edit Company's Workforce Heads Details</h4>
+            </div>
+
+            <div class="form-group">
+              <small class="form-text text-muted">CEO's Name</small>
+              <input type="text" class="form-control form-control-lg" placeholder="CEO's Name" name="college_university"
+                required />
+            </div>
+            <div class="form-group">
+              <span class="form-text text-muted">Change/Add profile picture of CEO</span>
+              <label for="myfile">Select a file:</label>
+              <input type="file" id="myfile" name="myfile"><br><br>
+            </div>
+
+            <div class="form-group">
+              <small class="form-text text-muted">President's Name</small>
+              <input type="text" class="form-control form-control-lg" placeholder="President's Name"
+                name="college_university" required />
+            </div>
+            <div class="form-group">
+              <span class="form-text text-muted">Change/Add profile picture of President</span>
+              <label for="myfile">Select a file:</label>
+              <input type="file" id="myfile" name="myfile"><br><br>
+            </div>
+
+            <div class="form-group">
+              <small class="form-text text-muted">Director's Name</small>
+              <input type="text" class="form-control form-control-lg" placeholder="Director's Name"
+                name="college_university" required />
+            </div>
+            <div class="form-group">
+              <span class="form-text text-muted">Change/Add profile picture of Director</span>
+              <label for="myfile">Select a file:</label>
+              <input type="file" id="myfile" name="myfile"><br><br>
+            </div>
+
+            <div class="form-group">
+              <small class="form-text text-muted">Manager's Name</small>
+              <input type="text" class="form-control form-control-lg" placeholder="Manager's Name"
+                name="college_university" required />
+            </div>
+            <div class="form-group">
+              <span class="form-text text-muted">Change/Add profile picture of Manager</span>
+              <label for="myfile">Select a file:</label>
+              <input type="file" id="myfile" name="myfile"><br><br>
+            </div>
+
+            <input type="submit" class="btn btn-primary btn-block mt-4" />
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Footer part -->
+  <footer class="footer">
+    <%- include('partials/footer') %>

@@ -1,54 +1,57 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>careerDeck</title>
 
-    <!-- website icon -->
-    <link rel="icon" href="favicon.ico">
+<head>
+  <meta charset="utf-8">
+  <title>careerDeck</title>
 
-    <!-- Bootstrap style sheet-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <!-- website icon -->
+  <link rel="icon" href="images/favicon.ico">
 
-    <!-- CSS stylesheet -->
-    <link rel="stylesheet" href="css/styles.css">
+  <!-- Bootstrap style sheet-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/b2fd0da17e.js" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- CSS stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/signup.css">
+  <link rel="stylesheet" href="css/home.css">
 
-  </head>
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/b2fd0da17e.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
 
-  <body>
+<body>
 
-          <!-- Nav Bar -->
+  <!-- Nav Bar -->
+  <nav class="navbar navbar-expand-md sticky-top navbar-dark color">
+    <a href="/"><img src="images/favicon2.png" alt="" height="40px" width="40px"></a>
+    <a class="navbar-brand title" href="/">&nbsp; careerDeck</a>
 
-    <nav class="navbar navbar-expand-md fixed-top navbar-dark color">
-      <a href="/"><img src="images/favicon2.png" alt="" height="40px" width="40px"></a>
-      <a class="navbar-brand title" href="/">&nbsp; careerDeck</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse sub-title" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse sub-title" id="navbarSupportedContent">
 
       <ul class="navbar-nav ml-auto">
-
+        <li class="nav-item">
+          <a class="nav-link" href="/dashboard-home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/job-search-page">Jobs</a>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Categories
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Profile
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item " href="">Developers</a>
-            <a class="dropdown-item " href="">Companies</a>
+            <a class="dropdown-item " href="/edit-profile-developer">Edit Profile</a>
+            <a class="dropdown-item " href="/logout">Logout</a>
           </div>
         </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="/logout">Logout</a>
-        </li>
       </ul>
-      </div>
-    </nav>
-
+    </div>
+  </nav>

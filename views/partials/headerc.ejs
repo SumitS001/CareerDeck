@@ -14,16 +14,17 @@
 
   <!-- CSS stylesheet -->
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/signup.css">
+  <link rel="stylesheet" href="css/home.css">
+
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/b2fd0da17e.js" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
 </head>
 
 <body>
 
   <!-- Nav Bar -->
-
   <nav class="navbar navbar-expand-md sticky-top navbar-dark color">
     <a href="/"><img src="images/favicon2.png" alt="" height="40px" width="40px"></a>
     <a class="navbar-brand title" href="/">&nbsp; careerDeck</a>
@@ -36,23 +37,17 @@
     <div class="collapse navbar-collapse sub-title" id="navbarSupportedContent">
 
       <ul class="navbar-nav ml-auto">
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Categories
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item " href="">Developers</a>
-            <a class="dropdown-item " href="">Companies</a>
-          </div>
-        </li>
-
         <li class="nav-item">
-          <a class="nav-link" href="/login">Login</a>
+          <a class="nav-link" href="/dashboard-home">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/signup">Sign Up</a>
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Profile
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item " href="/edit-profile-company">Edit Profile</a>
+          <a class="dropdown-item " href="/logout">Logout</a>
+        </div>
         </li>
       </ul>
     </div>

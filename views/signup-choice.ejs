@@ -1,28 +1,33 @@
-<%- include('partials/header') %> 
+<%- include('partials/header') %>
+
 <link rel="stylesheet" href="css/signup.css">
 
 <!-- choice section -->
 <div class="container choice-section">
-    <h1 class="signup-choice-title">How do You Want to Join Us?</h1>
-  </div>
+  <h1 class="signup-choice-title">How do You Want to Join Us?</h1>
+</div>
+<form action="/signup-choice" method="POST">
   <div class="row">
     <div class="col-lg-6 signup-page-options-left">
       <div class="card-img-block">
         <img class="img-fluid" src="images/Developer.jpg" alt="image" width="400vw">
       </div>
-      <button class="btn btn-lg btn-primary btn-block" type="submit" value="1">As a Developer</button>
+      <button class="btn btn-lg btn-primary btn-block" type="submit" name="accountType" value="1">As a
+        Developer</button>
     </div>
     <div class="col-lg-6 signup-page-options-right">
       <div class="card-img-block">
         <img class="img-fluid" src="images/Recruiter.jpg" alt="image" width="400vw">
       </div>
-      <button class="btn btn-lg btn-primary btn-block" type="submit" value="0">As a Recruiter</button>
+      <button class="btn btn-lg btn-primary btn-block" type="submit" value="0" name="accountType">As a
+        Recruiter</button>
     </div>
   </div>
+</form>
 
 
 
 
-  <!-- Footer part -->
-  <footer class="footer">
-<%- include('partials/footer') %> 
+<!-- Footer part -->
+<footer class="footer">
+  <%- include('partials/footer') %>

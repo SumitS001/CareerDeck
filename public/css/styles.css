@@ -29,14 +29,11 @@ body {
   background-image: url(../images/7.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
-  margin-top: 5%;
   height: 40vw;
 }
 
 .first-page-main-title{
-  position: relative;
-  right: 30px;
-  font-size: 7vw;
+  font-size: 8vw;
   font-family: sans-serif;
 }
 
@@ -69,6 +66,7 @@ body {
 }
 .footer{
   background-color: #209CEE;
+  position: relative;
 }
 
 .copyright{
@@ -84,12 +82,12 @@ hr{
 
 .login-signup{
   position: relative;
-  top: 150px;
+  top: 100px;
 }
 
 .for-login-signup{
   position: relative;
-  top: 300px;
+  top: 250px;
 }
 
 .login-page-title{
@@ -104,4 +102,36 @@ hr{
 .facebook-button{
   color: #fff;
   background-color: #3b5998;
+}
+
+
+
+.job-listing{
+  position: relative;
+  padding: 10px;
+  margin: 10px;
+  width: 80%;
+  left: 10%;
+  text-align: left;
+}
+
+.search{
+  padding-top: 10px;
+}
+
+/* EDIT DEVELOPER PROFILE */
+.edit-developer-profile{
+  margin-top: 20px;
+}
+
+.heads_edit{
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+
+/* POST A JOB */
+
+.left-col-jobpost{
+  text-align: left;
 }

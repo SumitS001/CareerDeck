@@ -1,0 +1,52 @@
+<%- include('partials/header2') %>
+<!-- Create Profile-->
+
+<div class="create-profile ">
+
+  <div class="row btn-section">
+    <div class="col col-lg-6 col-md-6 col-sm-6 ">
+      <a href="signup-create-education.html" class="btn btn-primary btn-go-back">Go Back</a>
+    </div>
+    <div class="col col-lg-6 col-md-6 col-sm-6  skip-btn-div">
+      <a href="signup-create-education.html" class="btn btn-primary btn-skip">Skip</a>
+    </div>
+
+  </div>
+
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 m-auto">
+        <h1 class="display-4 text-center">Add your Experience</h1>
+        <p class="lead text-center">Your Profile helps you discover the right people and opportunities</p>
+        <small class="d-block pb-3">* = required field</small>
+        <form action="/signup-add-experience" method="POST">
+
+          <div class="form-group">
+            <span class="form-text text-muted">Previous Job Description</span>
+            <textarea class="form-control form-control-lg" placeholder="Describe Us About Your Previous Job." name="bio"
+              rows="4"></textarea>
+          </div>
+
+          <div class="form-group">
+            <span class="form-text text-muted">Employee Relieving/Experience Letter</span>
+            <label for="myfile">Select a file:</label>
+            <input type="file" id="myfile" name="myfile"><br><br>
+          </div>
+
+          <input type="submit" class="btn btn-primary btn-block mt-4" />
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- Footer part -->
+<footer class="footer">
+  <%- include('partials/footer') %>

@@ -1,0 +1,199 @@
+<%- include('partials/header2') %>
+<!-- Edit Profile-->
+
+<div class="edit-developer-profile">
+
+  <div class="row btn-section">
+    <div class="col col-lg-6 col-md-6 col-sm-6 back-btn-div">
+      <a href="/dashboard-home" class="btn btn-primary btn-go-back">Go Back</a>
+    </div>
+
+  </div>
+  <div class="create-profile ">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 m-auto">
+          <h1 class="display-4 text-center">Edit Your Profile</h1>
+          <p class="lead text-center">Edit the information to make your profile stand out</p>
+          <form action="/edit-profile" method="POST">
+
+            <div class="form-group">
+              <span class="form-text text-muted">Change/Add profile picture</span>
+              <label for="myfile">Select a file:</label>
+              <input type="file" id="myfile" name="myfile"><br><br>
+            </div>
+
+            <div class="form-group">
+              <small class="form-text text-muted">Country </small>
+              <input type="text" class="form-control form-control-lg" placeholder="Country" name="country" required />
+            </div>
+
+            <div class="form-group">
+              <small class="form-text text-muted">State </small>
+              <input type="text" class="form-control form-control-lg" placeholder="State" name="state" required />
+            </div>
+
+            <div class="form-group">
+              <small class="form-text text-muted">City </small>
+              <input type="text" class="form-control form-control-lg" placeholder="City" name="city" required />
+            </div>
+
+            <div class="form-group">
+              <small class="form-text text-muted">Your Personal Address </small>
+              <input type="text" class="form-control form-control-lg" placeholder="1st Address" name="address"
+                required />
+            </div>
+
+            <div class="form-group">
+              <small class="form-text text-muted">Your Work Address</small>
+              <input type="text" class="form-control form-control-lg" placeholder="2nd Address" name="address" />
+            </div>
+
+            <div class="form-group">
+              <small class="form-text text-muted">Please use comma separated values (eg.
+                HTML,CSS,JavaScript,PHP)</small>
+              <input type="text" class="form-control form-control-lg" placeholder="Skills" name="skills" />
+            </div>
+
+            <div class="form-group">
+              <small class="form-text text-muted">If you want your latest repos and a Github link, include your
+                username</small>
+              <input type="text" class="form-control form-control-lg" placeholder="Github Username"
+                name="githubusername" />
+            </div>
+
+            <div class="form-group">
+              <small class="form-text text-muted">Edit bio</small>
+              <textarea class="form-control form-control-lg" placeholder="A short bio of yourself"
+                name="bio"></textarea>
+            </div>
+
+            <div class="mb-3" style="padding-top : 6%">
+              <h4>Edit social networking links</h4>
+            </div>
+
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="fab fa-twitter"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control form-control-lg" placeholder="Twitter Profile URL"
+                name="twitter" />
+            </div>
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="fab fa-facebook"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control form-control-lg" placeholder="Facebook Page URL" name="facebook" />
+            </div>
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="fab fa-instagram"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control form-control-lg" placeholder="Instagram Page URL"
+                name="instagram" />
+            </div>
+
+            <div class="mb-3" style="padding-top : 6%">
+              <h4>Edit your education</h4>
+            </div>
+
+            <div class="form-group">
+              <small class="form-text text-muted">College/University *</small>
+              <input type="text" class="form-control form-control-lg" placeholder="Enter your College/University"
+                name="college_university" required />
+            </div>
+
+            <div class="form-group">
+              <small class="form-text text-muted">Degree *</small>
+              <input type="text" class="form-control form-control-lg" placeholder="Enter your Degree" name="degree"
+                required />
+            </div>
+
+            <div class="form-group">
+              <small class="form-text text-muted">Specialization *</small>
+              <input type="text" class="form-control form-control-lg" placeholder="Specialization" name="Specialization"
+                required />
+            </div>
+
+            <div class="form-group">
+              <small class="form-text text-muted">Start Year *</small>
+              <input type="number" min="1960" max="2020" value="1960" class="form-control form-control-lg"
+                placeholder="Start Year" name="start_year" required />
+            </div>
+
+            <div class="form-group">
+              <small class="form-text text-muted">End Year *</small>
+              <input type="number" min="1960" max="2024" value="1960" class="form-control form-control-lg"
+                placeholder="End Year" name="end_year" required />
+            </div>
+
+
+            <div class="mb-3" style="padding-top : 6%">
+              <h4>Edit additional courses/qualifications</h4>
+            </div>
+
+            <div class="form-group">
+              <small class="form-text text-muted">College/University</small>
+              <input type="text" class="form-control form-control-lg" placeholder="Enter your College/University"
+                name="college_university" />
+            </div>
+
+            <div class="form-group">
+              <small class="form-text text-muted">Degree</small>
+              <input type="text" class="form-control form-control-lg" placeholder="Enter your Degree" name="degree" />
+            </div>
+
+            <div class="form-group">
+              <small class="form-text text-muted">Specialization</small>
+              <input type="text" class="form-control form-control-lg" placeholder="Specialization"
+                name="Specialization" />
+            </div>
+
+            <div class="form-group">
+              <small class="form-text text-muted">Start Year</small>
+              <input type="number" class="form-control form-control-lg" placeholder="Start Year" name="start_year" />
+            </div>
+
+            <div class="form-group">
+              <small class="form-text text-muted">End Year</small>
+              <input type="number" class="form-control form-control-lg" placeholder="End Year" name="end_year" />
+            </div>
+
+            <div class="mb-3" style="padding-top : 6%">
+              <h4>Edit your experience</h4>
+            </div>
+
+            <div class="form-group">
+              <span class="form-text text-muted">Previous Job Description *</span>
+              <textarea class="form-control form-control-lg" placeholder="Describe Us About Your Previous Job."
+                name="bio" rows="4"></textarea>
+            </div>
+
+            <div class="form-group">
+              <span class="form-text text-muted">Employee Relieving/Experience Letter *</span>
+              <label for="myfile">Select a file:</label>
+              <input type="file" id="myfile" name="myfile"><br><br>
+            </div>
+
+            <input type="submit" class="btn btn-primary btn-block mt-4" />
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Footer part -->
+  <footer class="footer">
+    <%- include('partials/footer') %>
