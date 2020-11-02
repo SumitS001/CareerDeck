@@ -13,7 +13,7 @@ const time = new Date();
 var id = "";
 const app = express();
 var jobid = "";
-var success = "";
+var success = 1;
 var type;
 
 app.set("view engine","ejs");
@@ -82,7 +82,10 @@ const userSchema = new mongoose.Schema({
   email: String,
   password: String,
   accountType: String,
-  post:[postSchema],
+  post:[{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "posts"
+  }],
   profiled: profiledSchema,
   profilec: profilecSchema
 });
@@ -92,9 +95,6 @@ userSchema.plugin(findOrCreate);
 
 const User = mongoose.model('users', userSchema);
 const Post = mongoose.model('posts', postSchema);
-const Profiled = mongoose.model('profiled', profiledSchema);
-const Education = mongoose.model('education', educationSchema);
-const Profilec = mongoose.model('profilec', profilecSchema);
 
 passport.use(User.createStrategy());
 
@@ -117,8 +117,8 @@ passport.use(new GoogleStrategy({
   function(accessToken, refreshToken, profile, cb) {
     var emailaddress = dotr(profile.emails[0].value);
     User.findOrCreate({ email: emailaddress}, function (err, user,wasCreated) {
-      if(wasCreated) success = "/signup-choice";
-      else success = "/dashboard-home";
+      if(wasCreated==true) success = 1;
+      else success = 0;
       id = user._id;
       console.log(user);
       return cb(err, user);
@@ -131,7 +131,7 @@ app.get('/auth/google',
 
 app.get('/auth/google/secrets', 
   passport.authenticate('google', {
-    successRedirect: success,
+    successRedirect: "/signup-choice",
     failureRedirect: '/login',
     failureFlash: "Invalid username or password"}),
   function(req, res) {
@@ -148,8 +148,8 @@ passport.use(new FacebookStrategy({
   function(accessToken, refreshToken, profile, done) {
     var emailaddress = dotr(profile.emails[0].value);
     User.findOrCreate({email: emailaddress}, function(err, user,wasCreated) {
-      if(wasCreated) success = "/signup-choice";
-      else success = "/dashboard-home";
+      if(wasCreated==true) success = 1;
+      else success = 0;
       id = user._id;
         if (err) { return done(err); }
       done(null, user);
@@ -160,7 +160,7 @@ passport.use(new FacebookStrategy({
 app.get('/auth/facebook', passport.authenticate('facebook',{scope: ["email"]}));
 
 app.get('/auth/facebook/callback',
-  passport.authenticate('facebook', { successRedirect: success ,failureRedirect: '/login' }));
+  passport.authenticate('facebook', { successRedirect: "/signup-choice" ,failureRedirect: '/login' }));
 
 app.get("/",function(req,res){
     if(req.isAuthenticated()) res.redirect("dashboard-home");
@@ -179,11 +179,20 @@ app.get("/signup",function(req,res){
 
 app.get("/dashboard-home",function(req,res){
     if(req.isAuthenticated()) {
+      const posts = [];
       User.findById(id,function(err,result){
-        if(result.accountType)
-        res.render("dashboard-home",{profile: result.profiled, user:result, post: result.post});
+        console.log(result.post);
+        result.post.forEach(function(item){
+          Post.findById(item,function(err,post){
+            console.log(post);
+            posts.push(post);
+          });
+        });
+        console.log(posts);
+        if(result.accountType==1)
+        res.render("dashboard-home",{profile: result.profiled, user:result, post: posts});
         else
-        res.render("dashboard-company-home",{profile: result.profiled, user:result, post: result.post});
+        res.render("dashboard-company-home",{profile: result.profilec, user:result, post: posts});
       });
     }
     else res.render("login");    
@@ -198,8 +207,11 @@ app.get("/contact-us",function(req,res){
 });
 
 app.get("/signup-choice",function(req,res){
-  if(req.isAuthenticated()) res.render("signup-choice");
-    else res.redirect("/login");
+  if(req.isAuthenticated()) {
+    if(success==1)
+    res.render("signup-choice");}
+    else { success=1;
+      res.redirect("/login");}
 });
 
 app.get("/job-search-page",function(req,res){
@@ -220,14 +232,14 @@ app.get("/job-view",function(req,res){
 });
 
 app.get("/edit-profile-developer",function(req,res){
-  if(req.isAuthenticated()&&type){
+  if(req.isAuthenticated()&&type==1){
     res.render("edit-profile-developer");
   }
   else res.redirect("/dashboard-home");
 });
 
 app.get("/edit-profile-company",function(req,res){
-  if(req.isAuthenticated()&&(!type)){
+  if(req.isAuthenticated()&&(type==0)){
     res.render("edit-profile-company");
   }
   else res.redirect("/dashboard-home");
@@ -252,8 +264,8 @@ app.post("/signup-choice",function(req,res){
     result.save();
   } );
   console.log(id);
-  if(type) res.redirect("/signup-create-profile");
-  else res.redirect("signup-create-profile-company");
+  if(type==1) res.redirect("/signup-create-profile");
+  else res.redirect("/signup-create-profile-company");
 });
 
 
@@ -284,13 +296,17 @@ app.post("/login",function(req,res){
 
 app.post("/signup",function(req,res){
     const emailaddress = dotr(req.body.email);
-    User.register({email: emailaddress}, req.body.password, function(err, user){
+    const user = new User({
+      email:emailaddress
+    });
+    User.register({email: dotr(req.body.email)}, req.body.password, function(err, user){
         id = user._id;
         if(err){
             console.log(err);
             res.redirect("/signup");
         }
         else{
+          console.log(id);
             passport.authenticate("local")(req, res, function(){
                 res.redirect("/signup-choice");
             });
@@ -307,7 +323,7 @@ app.post("/create-profile",function(req,res){
 
 let day=time.toLocaleDateString("en-US",options);
 
-  const newprofiled = new Profiled({
+  const newprofiled = ({
   firstName: req.body.first_name,
   lastName: req.body.last_name,
   doj: day,
@@ -329,7 +345,7 @@ let day=time.toLocaleDateString("en-US",options);
 });
 
 app.post("/signup-add-education",function(req,res){
-  const newEducation = new Education({
+  const newEducation = ({
   university: req.body.college_university,
   degree: req.body.degree,
   specialization: req.body.Specialization,
@@ -360,7 +376,7 @@ app.post("/signup-create-profile-company",function(req,res){
 
 let day=time.toLocaleDateString("en-US",options);
 
-  const newprofilec = new Profilec({
+  const newprofilec = ({
   name: req.body.company_name,
   doj: day,
   doe: req.body.doe,
@@ -370,15 +386,16 @@ let day=time.toLocaleDateString("en-US",options);
   });
 
   User.findById(id, function(err,result){
-    result.profilec = newProfilec;
+    result.profilec = newprofilec;
     result.save();
   });
+  res.redirect("/dashboard-home");
 });
 
 app.post("/post-a-job",function(req,res){
   const newPost = new Post({
   name: req.body.title,
-  description: req.body.descrition,
+  description: req.body.description,
   company: req.body.company,
   jobType: req.body.job_type,
   location: req.body.location,
@@ -386,10 +403,11 @@ app.post("/post-a-job",function(req,res){
   });
 
   User.findById(id,function(err,result){
+    newPost.save();
     result.post.push(newPost);
     result.save();
-    newPost.save();
   });
+  res.redirect("/dashboard-home");
 });
 
 app.post("/job-view",function(req,res){
@@ -419,7 +437,7 @@ app.listen(3000,function(){
 
 function dotr(name){
     var str = name.split('@');
-    str[0] = str[0].replace(/\./g, "");
-    name = str[0] + "@" + str[1];
+    str[0] = str[0].replace(/\./g, '');
+    name = str[0] + '@' + str[1];
     return name;
 }
